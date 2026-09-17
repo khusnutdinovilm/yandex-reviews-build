@@ -1,7 +1,7 @@
 <template>
   <div class="auth-page">
     <div class="auth-page__form">
-      <span class="auth-page__form-heading"> Авторизуйтесь в системе </span>
+      <h1 class="auth-page__form-title">Авторизуйтесь в системе</h1>
 
       <auth-form @success="onSuccessLogin" />
     </div>
@@ -20,7 +20,7 @@ defineOptions({
 
 const router = useRouter();
 const onSuccessLogin = () => {
-  router.push({ name: RouteName.Home });
+  router.push({ name: RouteName.Dashboard });
 };
 </script>
 
@@ -41,7 +41,7 @@ const onSuccessLogin = () => {
     flex-direction: column;
     gap: 32px;
 
-    &-heading {
+    &-title {
       align-self: center;
 
       font-size: 20px;

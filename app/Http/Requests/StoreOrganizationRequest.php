@@ -23,7 +23,12 @@ class StoreOrganizationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'url' => ['required', 'url', 'regex:#^https?://yandex\.[a-z]+/maps/org/#i'],
+            'url' => ['required', 'url', 'regex:#^https?://yandex\.[a-z]+/maps/#i'],
         ];
+    }
+
+    public function messages(): array
+    {
+        return ['url.regex' => 'Ссылка должна вести на организацию в Яндекс.Картах.'];
     }
 }

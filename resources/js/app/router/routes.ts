@@ -9,10 +9,18 @@ export const routes: RouteRecordRaw[] = [
   },
   {
     path: "/",
-    name: RouteName.Home,
+    name: RouteName.Dashboard,
     meta: {
       requiresAuth: true,
     },
-    component: () => import("@/pages/home").then((m) => m.HomePage),
+    component: () => import("@/pages/dashboard").then((m) => m.DashboardPage),
+  },
+  {
+    path: "/settings",
+    name: RouteName.Settings,
+    meta: {
+      requiresAuth: true,
+    },
+    component: () => import("@/pages/settings").then((m) => m.SettingsPage),
   },
 ];
