@@ -1,6 +1,6 @@
 <template>
   <p-toast />
-  <header v-if="authStore.isAuthenticated">header</header>
+  <site-header v-if="authStore.isAuthenticated" />
 
   <main>
     <router-view />
@@ -9,7 +9,9 @@
 
 <script setup lang="ts">
 import PToast from "primevue/toast";
+
 import { useAuthStore } from "@/features/auth";
+import { SiteHeader } from "@/widgets/site-header";
 
 const authStore = useAuthStore();
 </script>

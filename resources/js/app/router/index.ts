@@ -20,7 +20,7 @@ router.beforeEach(async (to) => {
 
   if (to.meta.requiresAuth && !auth.isAuthenticated) return { name: RouteName.Auth };
 
-  if (to.name === RouteName.Auth && auth.isAuthenticated) return { name: RouteName.Home };
+  if (to.name === RouteName.Auth && auth.isAuthenticated) return { name: RouteName.Dashboard };
 });
 
 export { router };

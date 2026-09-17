@@ -12,6 +12,8 @@ import { registerErrorHandler } from "./providers/error-handler";
 
 const app = createApp(App);
 
+app.use(createPinia());
+
 app.use(PrimeVue, {
   theme: {
     preset: AuraGreen,
@@ -24,8 +26,6 @@ app.use(PrimeVue, {
 app.use(ToastService);
 
 registerErrorHandler(app);
-
-app.use(createPinia());
 
 app.use(router);
 
