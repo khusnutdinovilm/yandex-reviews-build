@@ -38,7 +38,7 @@ defineOptions({
 });
 
 const emit = defineEmits<{
-  (e: "success"): void;
+  success: [];
 }>();
 
 const authStore = useAuthStore();

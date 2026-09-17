@@ -4,7 +4,7 @@ import { computed, ref } from "vue";
 import type { IUser, IUserForm } from "./types";
 import { authService } from "../api/auth-service";
 
-export const useAuthStore = defineStore("auth-store", () => {
+export const useAuthStore = defineStore("auth", () => {
   const user = ref<IUser | null>(null);
 
   const sessionChecked = ref(false);
